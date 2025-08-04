@@ -1,0 +1,22 @@
+[
+    {
+     	"repository": "device_meizu_sdm710-common",
+        "target_path": "device/meizu/sdm710-common"
+    },
+    {
+     	"repository": "device_meizu_16",
+        "target_path": "device/meizu/16th"
+    },
+    {
+     	"repository": "vendor_meizu_16",
+        "target_path": "vendor/meizu/16th"
+    }
+    {
+        "repository": "kernel_meizu_sdm710",
+        "target_path": "kernel/meizu/sdm710"
+    }
+    {
+        "repository": "packages_apps_memecam",
+        "target_path": "packages/apps/memecam"
+    }
+]

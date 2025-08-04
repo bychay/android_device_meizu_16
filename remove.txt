@@ -1,0 +1,10 @@
+kernel/meizu
+vendor/meizu
+device/meizu
+packages/apps/memecam
+firmware/meizu/16
+prebuilts/clang/host/linux-x86/clang-proton
+hardware/qcom-caf/sdm710/display
+hardware/qcom-caf/sdm710/audio
+hardware/qcom-caf/sdm710/media
+external/tinyxml
