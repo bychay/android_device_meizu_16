@@ -15,7 +15,7 @@ Meizu 16 X was announced and released in September 2018.
 | CPU          | Octa-core 2.2GHz Kryo 360              |
 | GPU          | Adreno 616                             |
 | Memory       | 6 GB RAM (LPDDR4X)                     |
-| Shipped Android version | 8.1.0                       |
+| Android      | 8.1.0 / 10.0 (vndk27)                                           |
 | Storage      | 64 GB / 128 GB                         |
 | Battery      | Non-removable Li-Po 3100 mAh           |
 | Dimensions   | 151 x 73.5 x 7.5 mm                    |
