@@ -5,11 +5,11 @@
     },
     {
      	"repository": "device_meizu_16",
-        "target_path": "device/meizu/16th"
+        "target_path": "device/meizu/16"
     },
     {
      	"repository": "vendor_meizu_16",
-        "target_path": "vendor/meizu/16th"
+        "target_path": "vendor/meizu/16"
     }
     {
         "repository": "kernel_meizu_sdm710",
