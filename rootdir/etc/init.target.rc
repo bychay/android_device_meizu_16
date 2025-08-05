@@ -3,3 +3,98 @@ on early-init
 
 #Load WLAN driver
     insmod /vendor/lib/modules/qca_cld3_wlan.ko
+
+on init
+    # Vibration motors
+    chown system system /sys/class/meizu/motor/on_off
+    chown system system /sys/class/meizu/motor/set_cspress
+    chown system system /sys/class/meizu/motor/set_mback
+    chown system system /sys/class/meizu/motor/rtp
+    chown system system /sys/class/meizu/motor/set_rtp
+    chown system system /sys/class/meizu/motor/freq
+    chown system system /sys/class/timed_output/vibrator/enable
+    chown system system /sys/class/meizu/motor/timeout
+    chown system system /sys/class/meizu/motor/proline
+    chmod 0666 /sys/class/meizu/motor/on_off
+    chmod 0666 /sys/class/meizu/motor/set_cspress
+    chmod 0666 /sys/class/meizu/motor/set_mback
+    chmod 0666 /sys/class/meizu/motor/rtp
+    chmod 0666 /sys/class/meizu/motor/set_rtp
+    chmod 0666 /sys/class/meizu/motor/freq
+    chmod 0666 /sys/class/timed_output/vibrator/enable
+    chmod 0666 /sys/class/meizu/motor/timeout
+    chmod 0666 /sys/class/meizu/motor/proline
+
+    # Control press pressure
+    chown system system /sys/cs_press/cs_press/sleep
+    chown system system /sys/cs_press/cs_press/cal_data
+    chown system system /dev/ndt
+    chmod 0666 /sys/cs_press/cs_press/sleep
+    chmod 0666 /sys/cs_press/cs_press/cal_data
+    chmod 0666 /dev/ndt
+
+    # Disable by default
+    write /sys/cs_press/cs_press/sleep 1
+
+on boot
+    # Disable by default
+    write /sys/cs_press/cs_press/sleep 1
+
+on post-fs-data
+    # Disable by default
+    write /sys/cs_press/cs_press/sleep 1
+
+on early-init
+    # Disable by default
+    write /sys/cs_press/cs_press/sleep 1
+
+on post-fs-data
+    # Display color mode
+    chown system system /sys/class/meizu/lcm/display/lut
+    chmod 0660 /sys/class/meizu/lcm/display/lut
+
+    # Display Setting temperature effect flyme
+    copy /vendor/etc/qdcm_calib_data_sofef00m_amoled_fhd+_cmd_mode_dsi_panel.xml /data/vendor/display/qdcm_calib_data_sofef00m_amoled_fhd+_cmd_mode_dsi_panel.xml
+    chown system system /data/vendor/display/qdcm_calib_data_sofef00m_amoled_fhd+_cmd_mode_dsi_panel.xml
+    chmod 0660 /data/vendor/display/qdcm_calib_data_sofef00m_amoled_fhd+_cmd_mode_dsi_panel.xml
+
+    # Cirrus calibration
+    chown system audio /dev/msm_cirrus_playback
+    chmod 0660 /dev/msm_cirrus_playback
+
+on boot
+    # MZ_RPMB_CTL
+    chown system system /dev/mz_rpmb_ctl
+    chmod 0600 /dev/mz_rpmb_ctl
+
+    # HBM mode
+    chown system system /sys/class/meizu/lcm/display/hbm
+    chmod 0644 /sys/class/meizu/lcm/display/hbm
+
+    # AOD
+    chown system system /sys/class/meizu/lcm/display/doze_mode
+    chown system system /sys/class/meizu/lcm/display/aod
+    chown system system /sys/class/meizu/lcm/display/doze_s2
+    chmod 0666 /sys/class/meizu/lcm/display/doze_mode
+    chmod 0666 /sys/class/meizu/lcm/display/aod
+    chmod 0666 /sys/class/meizu/lcm/display/doze_s2
+
+    # Sunnyscreen mode
+    chown system system /sys/class/meizu/lcm/display/sunnyscreen
+    chmod 0644 /sys/class/meizu/lcm/display/sunnyscreen
+    # Screen off gestures
+
+    chown system system /sys/class/meizu/tp/gesture_control
+    chmod 0660 /sys/class/meizu/tp/gesture_control
+
+    #DC mode
+    chmod 0644 sys/class/meizu/lcm/display/DC_Enable
+    chown system system sys/class/meizu/lcm/display/DC_Enable
+
+    # Meizu Sensor Test service
+    chown system system /vendor/bin/mz_sensor_test
+    chmod 0666 /vendor/bin/mz_sensor_test
+
+    # FOD
+    chown system system /sys/class/meizu/fp/qos_set
+    chmod 0644 /sys/class/meizu/fp/qos_set
