@@ -121,7 +121,7 @@ ro.vendor.audio.soundtrigger.training.level=60
 ro.vendor.audio.soundtrigger.hist.duration=1500
 
 # Bluetooth
-bluetooth.device.default_name=Meizu 16th
+bluetooth.device.default_name=Meizu 16
 
 # Display postprocessing
 vendor.display.enable_default_color_mode=1
@@ -130,7 +130,7 @@ vendor.display.enable_default_color_mode=1
 vendor.hw.fm.init=0
 
 # USB
-vendor.usb.product_string=Meizu 16th
+vendor.usb.product_string=Meizu 16
 
 # Thermal
 persist.thermal.config=/vendor/etc/thermal-engine.conf
