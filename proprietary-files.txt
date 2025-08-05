@@ -25,6 +25,7 @@ vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib/libbtnv.so
 
 # Camera
+vendor/bin/remosaic_daemon
 vendor/etc/camera/camxoverridesettings.txt
 vendor/lib64/libremosaic_daemon.so
 vendor/lib64/libremosaiclib.so
