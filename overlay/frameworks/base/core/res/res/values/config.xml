@@ -25,12 +25,6 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Udfps fod meizu 16. -->
-    <string-array name="config_udfps_enroll_stage_thresholds">
-        <item>0.25</item>
-        <item>0.5</item>
-        <item>0.75</item>
-    </string-array>
     <integer-array name="config_udfps_sensor_props">
         <item>542</item>
         <item>1686</item>
